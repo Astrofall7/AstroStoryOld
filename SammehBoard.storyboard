@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PUW-ob-Jze">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7518.3"/>
+    </dependencies>
+    <scenes>
+        <!--HomeViewController-->
+        <scene sceneID="Yj9-ws-E71">
+            <objects>
+                <viewController storyboardIdentifier="BeginningView" title="HomeViewController" id="PUW-ob-Jze" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XlF-Wl-op0"/>
+                        <viewControllerLayoutGuide type="bottom" id="8M8-sn-qA1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NTJ-Mi-Fpe">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2F-7v-19b">
+                                <rect key="frame" x="0.0" y="-3" width="667" height="378"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypw-m6-Zfm">
+                                        <rect key="frame" x="133" y="297" width="68" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Create">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createStory:" destination="PUW-ob-Jze" eventType="touchUpInside" id="5Xu-0f-bgl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3B-KM-yGd">
+                                        <rect key="frame" x="308" y="297" width="51" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startTheStory:" destination="PUW-ob-Jze" eventType="touchUpInside" id="h9a-LW-W2b"/>
+                                            <segue destination="I9I-th-pmF" kind="show" id="cjy-Vl-vk3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTY-F5-erc">
+                                        <rect key="frame" x="473" y="297" width="65" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Options">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AstroStoryLogoV3.png" translatesAutoresizingMaskIntoConstraints="NO" id="avy-8R-SsF">
+                                        <rect key="frame" x="181" y="47" width="305" height="140"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99663881745942451" green="1" blue="0.96307075880876813" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="createNewStory" destination="Ypw-m6-Zfm" id="B5P-pd-FBV"/>
+                        <outlet property="mainView" destination="C2F-7v-19b" id="M2K-zM-oqP"/>
+                        <outlet property="options" destination="PTY-F5-erc" id="aZZ-7j-iaF"/>
+                        <outlet property="startStory" destination="w3B-KM-yGd" id="C9O-Yb-bqf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ynx-g7-BH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352.5" y="-291.5"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="U4S-6W-HoX">
+            <objects>
+                <viewController storyboardIdentifier="PageContent" id="R7g-YW-9Y2" customClass="DSTPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zID-tv-oMd"/>
+                        <viewControllerLayoutGuide type="bottom" id="6IG-oJ-0tj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MoZ-ug-AYZ">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNK-RT-s3K">
+                                <rect key="frame" x="93" y="328" width="481" height="39"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Kra-tL-Ukz">
+                                        <rect key="frame" x="58" y="6" width="365" height="29"/>
+                                        <segments>
+                                            <segment title="Choice 1"/>
+                                            <segment title="Choice 2"/>
+                                            <segment title="Choice 3"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="selectorIsClicked:" destination="R7g-YW-9Y2" eventType="valueChanged" id="ehb-uY-A9u"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.97166370059999996" blue="0.78276577780000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="baU-Qk-QNS">
+                                <rect key="frame" x="51" y="36" width="564" height="278"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8D-or-a4B">
+                                        <rect key="frame" x="4" y="7" width="556" height="169"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAZ-8B-9yq">
+                                        <rect key="frame" x="42" y="189" width="480" height="81"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.94233864836352832" blue="0.72614044678891221" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="agent" destination="q8D-or-a4B" id="VDv-eY-7X6"/>
+                        <outlet property="buttonView" destination="Kra-tL-Ukz" id="k2b-c5-eo4"/>
+                        <outlet property="currentText" destination="zAZ-8B-9yq" id="VbO-wX-85t"/>
+                        <outlet property="options" destination="Kra-tL-Ukz" id="TP7-Wr-pYK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nm-xk-re5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171.5" y="-210.5"/>
+        </scene>
+        <!--Start View Controller-->
+        <scene sceneID="ypG-aa-rUW">
+            <objects>
+                <viewController id="I9I-th-pmF" customClass="DSTStartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wfd-d3-APu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fbg-JB-5aU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LaR-J7-VYC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ogI-Yw-jxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443.5" y="-210.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AstroStoryLogoV3.png" width="700" height="300"/>
+    </resources>
+</document>
